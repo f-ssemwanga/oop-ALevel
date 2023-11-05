@@ -31,9 +31,21 @@ class Bank:
         self.__latestAccount = -1 
             
     def login(self):
-        pass
         #This method should ask the user to give their account number and password, returning the account number if they match, or returning -1 if not
-
+        #1. Get valid user input
+        while True:
+        #use a while look to make sure the program does not proceed without valid info
+            try:
+                accNum = int(input('Enter the account number: '))
+                accPass = input('Enter the account password: ')
+                break 
+            except ValueError:
+                print('A whole number is required for the account number')
+        #2. Iterate over accounts in the list to check if given account number is in the list of registered accounts
+        for account in self.__accounts:
+            if account.getNumber() == accNum and account.checkPassword(accPass):
+                return account.getNumber()
+        return -1
     def deposit(self, number):
         pass
         #This method should ask the user how much money they want to deposit into their account, and correctly update the balance of their account
