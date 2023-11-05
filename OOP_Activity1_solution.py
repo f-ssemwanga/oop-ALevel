@@ -51,9 +51,26 @@ class Bank:
         #This method should ask the user how much money they want to deposit into their account, and correctly update the balance of their account
 
     def withdraw(self, number):
-        pass
         #This method should ask the user how much money they want to withdraw from their account, and correctly update the balance of their account
-           
+        #1. Validate an amount to withdraw
+        while True:
+            try:
+                withdrawAmount = float(input("Enter the amount you would like to withdraw: "))
+                break
+            except ValueError:
+                print('Please enter a numeric amount')
+        '''
+        2.
+        - Access the account from which to withdraw
+        - check if the balance is more than the withdraw amount
+        - retrieve the current balance
+        - deduct and update balance
+        '''  
+        if self.__accounts[number].getBalance() >= withdrawAmount:
+            newBalance = self.__accounts[number].getBalance() - withdrawAmount
+            self.__accounts[number].setBalance(newBalance)
+        else:
+            print('You have insufficient funds to make that withdrawal') 
     def checkBalance(self, number):
         #This method should display a message telling the user how much money is in their account
         pass
