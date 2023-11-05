@@ -23,7 +23,7 @@ class Account:
     def setBalance(self, newBalance):
         #This method should change the balance of this account to a specified new value
         self.__accountBalance = newBalance
-        print(f'The balance for this account has been successfully set to {newBalance}')
+        print(f'The balance for this account has been updated to {newBalance}')
 
 class Bank:
     def __init__(self): #A new bank is defined with a list of bank accounts and a value that keeps track of the account number of the most recently added account
@@ -83,11 +83,19 @@ class Bank:
             print('You have insufficient funds to make that withdrawal') 
     def checkBalance(self, number):
         #This method should display a message telling the user how much money is in their account
-        pass
+        print(f'Your account balance is £{self.__accounts[number].getBalance():.3f}')
     def addAccount(self):
-        pass
         #This method should create a new account with an account number 1 larger than the account number or the last account created, a password given by the user, and a balance of 0. The account should be added to the bank's list of accounts
+        self.__latestAccount += 1
+        print('A new account will be created for you')
+        input('Press any key to continue')
+        accountPassword = input('Enter the password to this new account: ')
+        #create a new account object with a default balance of 0
+        newAccount = Account(self.__latestAccount, accountPassword, 0)
+        print(f'A new account with the account number {newAccount.getNumber()} has been created')
         
+        #add the new account to the accounts list
+        self.__accounts.append(newAccount)
 def main():
     bank = Bank()
     loggedIn = False
