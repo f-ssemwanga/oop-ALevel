@@ -1,3 +1,5 @@
+
+import time
 class Clock:
   '''Class definition for the digital clock class'''
   def __init__(self, currentHour: int, currentMinute: int) -> None:
@@ -27,10 +29,18 @@ class Clock:
       self.__hours = 0
   
   def displayTime(self):
-    '''outputs the hours concatenated with the minutes'''
-    print(f'{self.__hours:02d}:{self.__minutes:02d}')
+    '''outputs the hours  and minutes in HH:MM format'''
+    print(f'{self.__hours:02d}:{self.__minutes:02d}', end='\r')
+    
+  #extension  to update the clock every minute from the starting time
+  def run(self):
+    '''Starts the clock to update every minute'''
+    while True:
+      self.displayTime()
+      self.newMinute()
+      time.sleep(60)
 
 myclock = Clock(10,55)
-myclock.displayTime()
+myclock.run()
     
   
