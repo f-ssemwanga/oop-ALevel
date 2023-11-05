@@ -47,9 +47,19 @@ class Bank:
                 return account.getNumber()
         return -1
     def deposit(self, number):
-        pass
         #This method should ask the user how much money they want to deposit into their account, and correctly update the balance of their account
-
+        while True:
+            try:
+                depositAmount = float(input('Enter the amount to be deposited: '))
+                break
+            except ValueError:
+                print('Amount to be deposited must be numeric')
+        #access the account to be updated
+        #retrieve the current balance
+        #update the current balance
+        #set the balance
+        newBalance = self.__accounts[number].getBalance() + depositAmount
+        self.__accounts[number].setBalance(newBalance)
     def withdraw(self, number):
         #This method should ask the user how much money they want to withdraw from their account, and correctly update the balance of their account
         #1. Validate an amount to withdraw
