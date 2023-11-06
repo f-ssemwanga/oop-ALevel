@@ -18,12 +18,58 @@ class Customer:
         #returns the rating
         return self.__rating
 class Room:
-    def __init__(self, number, size, clean):
+    def __init__(self, number, capacity, clean):
+        #room constructor Method
         self.__number = number
-        self.__size = size
+        self.__capacity = capacity
         self.__occupants = []
         self.__clean = clean
-    
+    def addOccupant(self, occupantIn):
+        #adds a customer to the room
+        #if room capacity is not exceeded
+        #update occupants experience
+        #update cleanliness of the room
+        if len(self.__occupants) < self.__capacity:
+            self.__occupants.append(occupantIn)
+            occupantIn.incrementRating(1) # positive experience
+        else:
+            occupantIn.incrementRating(-1) # negative experience
+            return
+        if self.__clean:
+            occupantIn.incrementRating(1) # room is clean
+        else:
+            occupantIn.incrementRating(-1)
+        self.__clean = False
+    def removeOccupant(self, occupantOut):
+        #handles removal of an occupant
+        index = -1  #stores the index of the occupant to be removed
+        for pos, occupant in enumerate(self.__occupants):
+            if occupantOut.getName() == occupant.getName():
+                index = pos
+        if index != -1:
+            self.__occupants.pop(index)
+            
+        '''
+        The enumerate function allows us to get the index and the object from the objects' list
+        example usage:
+        items = ['apple','banana', 'cherry']
+        for index, value in enumerate(items):
+            print(f'Index: {index}, Value: {value}')
+        
+        Outputs
+        Index: 0 Value: Apple
+        Index: 1 Value: banana
+        Index: 2 Value: cherry
+        
+        '''
+    def cleanRoom(self):
+        #clean the room if it is empty
+        if self.__occupants == []:
+            self.__clean = True
+        return self.__clean
+    def getNumber(self):
+        #returns the room number - needed when booking the room
+        return self.__number
 class Hotel:
     def __init__(self, rooms):
         self.__rooms = rooms
