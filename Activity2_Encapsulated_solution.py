@@ -47,7 +47,7 @@ class Room:
             if occupantOut.getName() == occupant.getName():
                 index = pos
         if index != -1:
-            self.__occupants.pop(index)
+            del self.__occupants[index]
             
         '''
         The enumerate function allows us to get the index and the object from the objects' list
@@ -71,9 +71,40 @@ class Room:
         #returns the room number - needed when booking the room
         return self.__number
 class Hotel:
-    def __init__(self, rooms):
+    def __init__(self, rooms, customers, receptionist, cleaner, manager):
+        #hotel constructor method
         self.__rooms = rooms
-
+        self.__customers = customers
+        self.__receptionist = receptionist
+        self.__cleaner = cleaner
+        self.__manager = manager
+    def cleanRooms(self):
+        #method for cleaning the room
+        #iterate over the rooms and clean the room if it needs to be cleaned
+        for room in self.__rooms:
+            if room.cleanRoom():
+                print(f'{self.__cleaner} cleaned Room {room.getNumber()}')
+    def checkIn(self, customers):
+        #used to check in a customer
+        for customer in customers:
+            room  = self.__rooms[self.customers[customer-1].getRoom() -1]
+            room.addOccupant(self.__customers[customer -1])
+            print(f'{self.__receptionist} checked in {self._customers[customer -1].getName()}')
+    def checkOut(self, customers):
+        #used to check in a customer
+        for customer in customers:
+            room  = self.__rooms[self.customers[customer-1].getRoom() -1]
+            room.removeOccupant(self.__customers[customer -1])
+            print(f'{self.__receptionist} checked out {self._customers[customer -1].getName()}')
+            self.takeFeedback(self.__customers[customer -1])
+    def takeFeedback(self, customer):
+        #take customer feedback
+        if customer.getRating() >0:
+            print(f'{self.__manager} says:\n +{customer.getName()} was happy with their stay!')
+        elif customer.getRating() <0:
+            print(f'{self.__manager} says:\n +{customer.getName()} was unhappy with their stay!')
+        else:
+            print(f'{self.__manager} says:\n +{customer.getName()} found their stay to be ok.')
     def checkRooms(self):
         return self.__rooms
         
