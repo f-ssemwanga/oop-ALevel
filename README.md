@@ -22,8 +22,9 @@ Add the missing attributes and method logic to the Activity 1 Skeleton Code to c
 
 ### Task 3 - Encapsulation - Demonstrate understanding and implementation of encapsulation
 The Activity 2 Skeleton Code is a system that manages a hotel and its staff.  You have been provided with 2 files 
-[Activity 2 - Encapsulation Skeleton Code](Activity2_Encapsulated%20Skeleton.py)
-[Activity 2 - None Encapsulated code](Activity2_None-Encapsulated.py)
+- [Activity 2 - Encapsulation Skeleton Code](Activity2_Encapsulated%20Skeleton.py)
+
+- [Activity 2 - None Encapsulated code](Activity2_None-Encapsulated.py)
 
 Customers are checked in and out of their rooms, and leave feedback depending on how their stay was (if they are successfully checked in or their room is clean they become happier with their stay, and if their room is overbooked or unclean they become less happy with their stay). 
 
