@@ -87,24 +87,24 @@ class Hotel:
     def checkIn(self, customers):
         #used to check in a customer
         for customer in customers:
-            room  = self.__rooms[self.customers[customer-1].getRoom() -1]
+            room  = self.__rooms[self.__customers[customer-1].getRoom() -1]
             room.addOccupant(self.__customers[customer -1])
-            print(f'{self.__receptionist} checked in {self._customers[customer -1].getName()}')
+            print(f'{self.__receptionist} checked in {self.__customers[customer -1].getName()}')
     def checkOut(self, customers):
         #used to check in a customer
         for customer in customers:
-            room  = self.__rooms[self.customers[customer-1].getRoom() -1]
+            room  = self.__rooms[self.__customers[customer-1].getRoom() -1]
             room.removeOccupant(self.__customers[customer -1])
-            print(f'{self.__receptionist} checked out {self._customers[customer -1].getName()}')
+            print(f'{self.__receptionist} checked out {self.__customers[customer -1].getName()}')
             self.takeFeedback(self.__customers[customer -1])
     def takeFeedback(self, customer):
         #take customer feedback
         if customer.getRating() >0:
-            print(f'{self.__manager} says:\n +{customer.getName()} was happy with their stay!')
+            print(f'{self.__manager} says:\n{customer.getName()} was happy with their stay!')
         elif customer.getRating() <0:
-            print(f'{self.__manager} says:\n +{customer.getName()} was unhappy with their stay!')
+            print(f'{self.__manager} says:\n{customer.getName()} was unhappy with their stay!')
         else:
-            print(f'{self.__manager} says:\n +{customer.getName()} found their stay to be ok.')
+            print(f'{self.__manager} says:\n{customer.getName()} found their stay to be ok.')
     def checkRooms(self):
         return self.__rooms
         
@@ -121,38 +121,30 @@ class Receptionist:
         self.__name = name
 
 def main():
-    room1 = Room(1, 1, False)
-    room2 = Room(2, 2, True)
-    room3 = Room(3, 1, False)
-    hotel = Hotel([room1,room2,room3])
-    customer1 = Customer(1, "Mrs. White")
-    customer2 = Customer(2, "Mr. Green")
-    customer3 = Customer(2, "Miss. Scarlett")
-    customer4 = Customer(3, "Mrs. Peacock")
-    customer5 = Customer(2, "Prof. Plum")
-    customer6 = Customer(3, "Col. Mustard")    
-    receptionist = Receptionist("Jane")
-    cleaner = Cleaner("Michael")
-    manager = Manager("Janhavi")
+    hotel = Hotel(
+        [Room(1,1,False), Room(2,2,True),Room(1,1,False)],
+        [
+            Customer(1, "Mrs. White"),
+            Customer(2, "Mr. Green"),
+            Customer(2, "Miss Scarlett"),
+            Customer(3, "Mrs. Peacock"),
+            Customer(2, "Prof. Plum"),
+            Customer(3, "Col. Mustard")
+        ], 
+        "Jane", "Michael", "Janhavi")
+    hotel.checkIn([1,2,3])
+    hotel.checkOut([1])
     
-    receptionist.checkIn(hotel, customer1)
-    receptionist.checkIn(hotel, customer2)
-    receptionist.checkIn(hotel, customer3)
-    receptionist.checkOut(hotel, customer1, manager)
+    hotel.cleanRooms()
     
-    cleaner.cleanRooms(hotel)
+    hotel.checkIn([4])
+    hotel.checkOut([4])
+    hotel.checkIn([5])
+    hotel.checkOut([5,2,3])
     
-    receptionist.checkIn(hotel, customer4)
-    receptionist.checkOut(hotel, customer4, manager)
-    receptionist.checkIn(hotel, customer5)
-    receptionist.checkOut(hotel, customer5, manager)
-    receptionist.checkOut(hotel, customer2, manager)
-    receptionist.checkOut(hotel, customer3, manager)
-    
-    cleaner.cleanRooms(hotel)
-    
-    receptionist.checkIn(hotel, customer6)
-    receptionist.checkOut(hotel, customer6, manager)
+    hotel.cleanRooms()
+    hotel.checkIn([6])
+    hotel.checkOut([6])
     input()
     
 if __name__ == '__main__':
