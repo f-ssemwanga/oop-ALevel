@@ -49,4 +49,4 @@ You may use the provided Activity 2 Encapsulated Skeleton code, which provides a
 5. The main method should not be altered.
 - ![Task Diagram showing relationship between the classes](inheritance_Abstract_Methods_diagram.png)
 - ![Start up code templates for inheritance and Abstract method implementation](abstract_Method_Inhertance_Code_StartUp.png)
-- ![Main code template](Activity4_SkeletonCode.py)
+- [Main code template](Activity4_SkeletonCode.py)
