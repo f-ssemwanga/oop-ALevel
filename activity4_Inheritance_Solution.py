@@ -240,15 +240,12 @@ class Otter(Mammal):
         self.birth()
         print()
         
-class Gorilla:
+class Gorilla(Mammal):
     def __init__(self):
-        self._coldBlooded = False
-        self._skinType = "fur"
-        self._tail = False
-        self._legs = 2
-        self._arms = 2
-        self._wings = 0
-        
+      super().__init__()
+      self._legs = 2
+      self._arms = 2
+      
     def move(self):
         print("This animal walks and climbs")
         
@@ -279,13 +276,11 @@ class Gorilla:
         self.birth()
         print()
         
-class Bat:
+class Bat(Mammal):
     def __init__(self):
-        self._coldBlooded = False
-        self._skinType = "fur"
+        super().__init__()
         self._tail = True
         self._legs = 2
-        self._arms = 0
         self._wings = 2
         
     def move(self):
