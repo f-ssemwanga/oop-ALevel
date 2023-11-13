@@ -25,7 +25,15 @@ class Animal(metaclass =ABCMeta):
   @abstractmethod
   def getInfo(self):
     pass
-  
+class Mammal(Animal):
+  '''mammal inherits animal'''
+  def __init__(self):
+    super().__init__()
+    self.__skinType ="fur" 
+  def birth(self):
+    print("This animal gives birth to live young")
+  def getInfo(self):
+    return super().getInfo()
   
 
 class Tortoise:
@@ -120,7 +128,7 @@ class Tortoise(Reptile):
     print()
 class Snake(Reptile):
     def __init__(self):
-      super().__int__()
+      super().__init__()
       self._legs = 0
          
     def move(self):
