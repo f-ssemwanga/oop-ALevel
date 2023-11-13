@@ -37,3 +37,16 @@ The manager should be responsible for processing feedback, the cleaner should be
 All attributes should be made private (although you may add any methods that you think are helpful). 
 
 You may use the provided Activity 2 Encapsulated Skeleton code, which provides a converted main method and constructors for each class that do not need to be altered. 
+
+### Task 4 - Inheritance and Abstract methods
+- The code template provides contains classes for various animals, describing what attributes they have and what actions they can do.
+
+- The task is to do the following:
+1. Keep  the functionality of the code i.e. produces the same output
+2. Add 3 additional classes - Animal, Reptile  and Mammal
+3. The Animal class should include abstract methods
+4. Classes should inherit from other classes as appropriate, and as much functionality as possible should be moved to the 3 new classes
+5. The main method should not be altered.
+- ![Task Diagram showing relationship between the classes](inheritance_Abstract_Methods_diagram.png)
+- ![Start up code templates for inheritance and Abstract method implementation](abstract_Method_Inhertance_Code_StartUp.png)
+- ![Main code template](Activity4_SkeletonCode.py)
