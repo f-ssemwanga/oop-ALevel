@@ -86,6 +86,32 @@ class Reptile(Animal):
   def hibernate(self):
     '''implements its own method not part of its parent class'''
     print("This animal hibernates")
+
+class Tortoise(Reptile):
+  '''Implement Tortoise which inherits from Reptile'''
+  def __init__(self) -> None:
+    '''does not modify any of the parental attributes hence empty constructor'''
+    super().__init__()
+    
+  def move(self):
+    print("This animal walks")
+  def eat(self):
+    print('This animal is a herbivore')
+  def getInfo(self):
+    print("Tortoise")
+    print("This animal is cold-blooded")
+    print("This animal is covered in scales")
+    print("This animal has a tail")
+    print(f'This animal has {self._legs} legs')
+    self.move()
+    self.eat()
+    self.birth()
+    self.hibernate()
+    print()
+    
+      
+  
+
 class Turtle:
     def __init__(self):
         self._coldBlooded = True
