@@ -164,15 +164,9 @@ class Snake(Reptile):
       
   
 
-class Turtle:
+class Turtle(Tortoise):
     def __init__(self):
-        self._coldBlooded = True
-        self._skinType = "scales"
-        self._tail = True
-        self._legs = 4
-        self._arms = 0
-        self._wings = 0
-    
+      super().__init__()  
     def move(self):
         print("This animal crawls and swims")
         
@@ -209,14 +203,12 @@ class Turtle:
         
 
         
-class Otter:
+class Otter(Mammal):
     def __init__(self):
-        self._coldBlooded = False
-        self._skinType = "fur"
-        self._tail = True
-        self._legs = 4
-        self._arms = 0
-        self._wings = 0
+      super().__init__()
+      self._tail = True
+      self._legs = 4
+      
         
     def move(self):
         print("This animal walks and swims")
