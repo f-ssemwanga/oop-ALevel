@@ -1,3 +1,33 @@
+from abc import ABC, ABCMeta, abstractmethod
+class Animal(metaclass =ABCMeta):
+  '''Animal abstract class'''
+  def __init__(self) -> None:
+      self._coldBlooded = False
+      self._skinType = None
+      self._tail = False
+      self._legs = 0
+      self._arms = 0
+      self._wings = 0
+      
+  #create the abstract methods
+  @abstractmethod
+  def move(self):
+    pass
+  
+  @abstractmethod
+  def eat(self):
+    pass
+  
+  @abstractmethod
+  def eat(self):
+    pass
+  
+  @abstractmethod
+  def getInfo(self):
+    pass
+  
+  
+
 class Tortoise:
     def __init__(self):
         self._coldBlooded = True
