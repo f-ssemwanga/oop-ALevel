@@ -70,7 +70,22 @@ class Tortoise:
         self.birth()
         self.hibernate()
         print()
-        
+class Reptile(Animal):
+  '''Reptile inherits from Animal - must implement abstracted methods that apply to it'''
+  def __init__(self) -> None:
+    '''must call the super method and pass additional parameters/values'''
+    super().__init__()  
+    self._coldBlooded = True
+    self._skinType = "scales"
+    self._tail = True
+    self._legs = 4
+  
+  def birth(self):
+    '''implements the birth abstract method'''
+    print('This animal lays eggs')
+  def hibernate(self):
+    '''implements its own method not part of its parent class'''
+    print("This animal hibernates")
 class Turtle:
     def __init__(self):
         self._coldBlooded = True
