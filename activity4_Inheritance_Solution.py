@@ -99,16 +99,60 @@ class Tortoise(Reptile):
     print('This animal is a herbivore')
   def getInfo(self):
     print("Tortoise")
-    print("This animal is cold-blooded")
-    print("This animal is covered in scales")
-    print("This animal has a tail")
-    print(f'This animal has {self._legs} legs')
+    if self._coldBlooded:
+      print("This animal is cold-blooded")
+    else:
+      print("This animal is warm-blooded")
+    if self._skinType != None:
+      print("This animal is covered in " + self._skinType)
+    if self._tail:
+      print("This animal has a tail")
+    if self._legs > 0:
+        print("This animal has " + str(self._legs) + " legs")
+    if self._arms > 0:
+        print("This animal has " + str(self._arms) + " arms")
+    if self._wings > 0:
+      print("This animal has " + str(self._wings) + " wings")
     self.move()
     self.eat()
     self.birth()
     self.hibernate()
     print()
-    
+class Snake(Reptile):
+    def __init__(self):
+      super().__int__()
+      self._legs = 0
+         
+    def move(self):
+        print("This animal slithers")
+        
+    def eat(self):
+        print("This animal is a carnivore")
+        
+    def hibernate(self):
+        print("This animal hibernates")
+        
+    def getInfo(self):
+        print("Snake:")
+        if self._coldBlooded:
+            print("This animal is cold-blooded")
+        else:
+            print("This animal is warm-blooded")
+        if self._skinType != None:
+            print("This animal is covered in " + self._skinType)
+        if self._tail:
+            print("This animal has a tail")
+        if self._legs > 0:
+            print("This animal has " + str(self._legs) + " legs")
+        if self._arms > 0:
+            print("This animal has " + str(self._arms) + " arms")
+        if self._wings > 0:
+            print("This animal has " + str(self._wings) + " wings")
+        self.move()
+        self.eat()
+        self.birth()
+        self.hibernate()
+        print()   
       
   
 
@@ -155,48 +199,7 @@ class Turtle:
         self.hibernate()
         print()
         
-class Snake:
-    def __init__(self):
-        self._coldBlooded = True
-        self._skinType = "scales"
-        self._tail = True
-        self._legs = 0
-        self._arms = 0
-        self._wings = 0
-        
-    def move(self):
-        print("This animal slithers")
-        
-    def eat(self):
-        print("This animal is a carnivore")
 
-    def birth(self):
-        print("This animal lays eggs")
-        
-    def hibernate(self):
-        print("This animal hibernates")
-        
-    def getInfo(self):
-        print("Snake:")
-        if self._coldBlooded:
-            print("This animal is cold-blooded")
-        else:
-            print("This animal is warm-blooded")
-        if self._skinType != None:
-            print("This animal is covered in " + self._skinType)
-        if self._tail:
-            print("This animal has a tail")
-        if self._legs > 0:
-            print("This animal has " + str(self._legs) + " legs")
-        if self._arms > 0:
-            print("This animal has " + str(self._arms) + " arms")
-        if self._wings > 0:
-            print("This animal has " + str(self._wings) + " wings")
-        self.move()
-        self.eat()
-        self.birth()
-        self.hibernate()
-        print()
         
 class Otter:
     def __init__(self):
