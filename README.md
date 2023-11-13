@@ -50,3 +50,34 @@ You may use the provided Activity 2 Encapsulated Skeleton code, which provides a
 - ![Task Diagram showing relationship between the classes](inheritance_Abstract_Methods_diagram.png)
 - ![Start up code templates for inheritance and Abstract method implementation](abstract_Method_Inhertance_Code_StartUp.png)
 - [Main code template](Activity4_SkeletonCode.py)
+
+## Additional Inheritance tasks
+
+### Electric Car:
+  Create an ElectricCar class which inherits from the car class we created in "The Cars" task.  Test it by creating an instance of an electric car e.g. ("tesla", "Model S", 2019).  Call the descriptive_name() method on this new instance.
+
+Add the attribute battery_size  to the ElectricCar class.  Add a method describe_battery() which prints out a description of the electric car's battery in kwh e.g. "This car has a 75 kwh battery". Test this method by calling it on the instance  of ElectricCar.
+
+Add a method fill_gas_tank() to ElectricCar.  It should override the parent method as the electric car does not have a gas tank.  It should print an appropriate message when called.  Test is by trying to fill the ElectricCar instance with gas.
+
+Now try and use the battery instance as an attribute in the car class by following the steps below:
+	i) Create a Battery class passing in the battery_size=75 as an attribute into the constructor
+	ii) Move the describe_battery() method into the Battery class
+	iii) Now create a battery attribute in the car class and set it as an instance of the Battery class.
+iv)  Now test the instance of ElectricCar by calling a describe_battery() method on it.
+
+Extend the Battery Class by adding a method get_range(), this method has the logic of determining the range based on the size of the battery.  A 75kwh battery has a range of 260 miles and a 100 kwh battery has a range of 315 miles. Test the code with the correct data to output the following:
+"2019 Tesla Model S
+This car has a 75-kwh battery
+This car can go about 260 miles on full charge"
+
+
+### Ice Cream Stand: 
+An ice cream stand is a special kind of restaurant.  Write a class called IceCreamStand that inherits from the restaurant  class you wrote earlier.  Either version of the class will work.  Add an attribute called flavours that stores a list of flavours.  Write a method that displays these flavours.  Create an instance of IceCreamStand and call this method.
+
+### Admin: 
+An administrator is a special kind of User.  Write a class called Admin  that inherits from the user class you wrote in an earlier exercise.  Add an attribute, privileges, that stores a list of strings like "can add a post", "can delete a post", "can ban a user", and so on.  Write a method called show_privileges() that lists the administrator's set of privileges.  Create and instance of Admin and call your method.
+
+### Privileges: 
+Write a separate Privileges class.  The class should have one attribute, privileges, that stores a list of strings as described in the Admin task above.  Move the show_privileges() method to this class.  Make a privileges instance as an attribute in the Admin class.  Create a new instance of Admin and use your method to show its privileges.
+ 
