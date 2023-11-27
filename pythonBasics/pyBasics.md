@@ -3,7 +3,7 @@
 ### 1. Choosing the right IDE
 You can use Visual Studio or for absolute beginners I recommend [Thonny](http://www.thonny.org)
 
-![Python Basic Concepts Summarised](./pythonBasics/PythonBasicConcepts.png)
+![Python Basic Concepts Summarised](./PythonBasicConcepts.png)
 
 ## 2. Basic Sequential Tasks
 
