@@ -9,4 +9,4 @@ You can use Visual Studio or for absolute beginners I recommend [Thonny](http://
 
 ### Code the following tasks - try to put each solution in a function of its own
 ![Sequential Tasks 1-5](./pythonBasics/basicChallenges1-5.png)
-![Sequential Tasks 6-7](./basicChallenges6-7.png)
+![Sequential Tasks 6-7](./)
