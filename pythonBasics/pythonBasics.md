@@ -8,4 +8,5 @@ You can use Visual Studio or for absolute beginners I recommend [Thonny](http://
 ## 2. Basic Sequential Tasks
 
 ### Code the following tasks - try to put each solution in a function of its own
-![Sequential Tasks 101](./pythonBasics/basicChallenges1-5.png)
+![Sequential Tasks 1-5](./pythonBasics/basicChallenges1-5.png)
+![Sequential Tasks 6-7](./basicChallenges6-7.png)
