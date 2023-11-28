@@ -1,7 +1,7 @@
 # oop-ALevel
 OOp Principles A Level 
 
-### Task 1 - This is the very first Task 
+## Task 1 - This is the very first Task 
 
 Students are required to Use pseudocode to write a class with relevant attributes and methods to represent a digital clock object. It should represent the time as a 24 hour clock, and include methods to: create a new object, set the time manually, display the time, and update the time at the end of each minute.
 ![Task 1 Pseudo Algorithm](oop_Task1_Clock.png)
@@ -10,7 +10,7 @@ Students are required to Use pseudocode to write a class with relevant attribute
 - Add functionality so that the clock automatically displays from the starting minute and hour
 - Add functionality so that the clock now has changing seconds.
 
-### Task 2 - OOP Programming Activity 1 - The Bank Task
+## Task 2 - OOP Programming Activity 1 - The Bank Task
 
 This Activity uses Skeleton code [OOP_Activity1_Skeleton_Code](OOP_Activity1_skeleton_Code.py) is part of a program that allows a user to create a bank account, login to their account, check their balance and deposit or withdraw money from their account. 
 
@@ -20,7 +20,7 @@ individual bank accounts, and a Bank class, that holds all of the Bank accounts 
  
 Add the missing attributes and method logic to the Activity 1 Skeleton Code to complete its functionality. No changes should be made to main, no new methods should be defined, and the parameters that the methods use should not be changed, deleted or added to. 
 
-### Task 3 - Encapsulation - Demonstrate understanding and implementation of encapsulation
+## Task 3 - Encapsulation - Demonstrate understanding and implementation of encapsulation
 The Activity 2 Skeleton Code is a system that manages a hotel and its staff.  You have been provided with 2 files 
 - [Activity 2 - Encapsulation Skeleton Code](Activity2_Encapsulated%20Skeleton.py)
 
@@ -81,3 +81,4 @@ An administrator is a special kind of User.  Write a class called Admin  that in
 ### Privileges: 
 Write a separate Privileges class.  The class should have one attribute, privileges, that stores a list of strings as described in the Admin task above.  Move the show_privileges() method to this class.  Make a privileges instance as an attribute in the Admin class.  Create a new instance of Admin and use your method to show its privileges.
  
+## Task 5 - Polymorphism
