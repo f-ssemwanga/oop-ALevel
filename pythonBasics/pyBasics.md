@@ -1,7 +1,8 @@
 # Python Basics Tasks
 
 ### 1. Choosing the right IDE
-NOTHING TO DO HERE - JUST READ!! You can use Visual Studio, to code this however for absolute beginners I recommend this IDE [Thonny](http://www.thonny.org)
+NOTHING TO DO HERE - JUST READ!! 
+You can use Visual Studio, to code this however for absolute beginners I recommend this IDE [Thonny](http://www.thonny.org)
 
 ![Python Basic Concepts Summarised](./PythonBasicConcepts.png)
 # -------------------------- Tasks Start Here ----------------------------------
