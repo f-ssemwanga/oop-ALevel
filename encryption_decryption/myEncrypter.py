@@ -21,7 +21,7 @@ class Encypter:
         self.out.append(new)
       else:
         self.out.append(eachLetter)
-    return self.out
+    return "".join(self.out)
 
 testInst = Encypter()
-print(testInst.alphabet)
+print(testInst.encrypt("You Muppet"))
